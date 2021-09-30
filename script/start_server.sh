@@ -1,4 +1,4 @@
 #!/bin/bash
-npm install -d 
-npm install pm2 -g
-pm2 start app.js
+sudo npm install -d 
+sudo npm install pm2 -g
+sudo pm2 start app.js
