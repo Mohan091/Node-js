@@ -1,0 +1,16 @@
+version: 0.2
+
+env:    
+   parameter-store:
+                mongo_uri: "/vinayak/mongo_uri"
+
+phases:
+   build:
+       commands:
+           - sed -i "s/localhost/"$mongo_uri"/" app.js 
+
+
+
+artifacts:
+        files: 
+            - " **/* "
