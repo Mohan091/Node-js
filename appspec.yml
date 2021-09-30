@@ -10,6 +10,11 @@ file:
 
 
 hooks:
+   Install: 
+        - location: /script/install_server.sh
+           timeout: 300
+           runas: root
+   
    ApplicationStart:
          - location: /script/start_server.sh
            timeout: 300
