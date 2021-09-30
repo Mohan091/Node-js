@@ -5,6 +5,7 @@ file:
     - source: / 
       destination: /home/ubuntu/back/node-express-realworld-example-app
       timeout: 300
+      overwrite: true
       
 
 
