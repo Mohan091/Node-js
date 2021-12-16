@@ -3,7 +3,7 @@ version: 0.2
 env: 
    
    parameter-store:
-                Mongo_Uri: "/vinayak/mongo_uri"
+                Mongo_Uri: "/ajay/mongo_uri"
 
 phases:
    build:
