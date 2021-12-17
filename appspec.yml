@@ -11,13 +11,12 @@ files:
 
 hooks:
    
-   hooks:
    ApplicationInstall:
-         - location: install_script.sh
+         - location: /sript/install_script.sh
            timeout: 300
            runas: root
            
    ApplicationStart:
-         - location: start_script.sh
+         - location: /sript/start_script.sh
            timeout: 300
            runas: root
