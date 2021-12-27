@@ -6,12 +6,24 @@ env:
                 Mongo_Uri: "/ajay/mongo_uri"
 
 phases:
+   install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - echo Installing the Nodejs package
+   pre_build:
+    commands:
+      - echo Installing source NPM dependencies.
+      - npm install
    build:
-       commands:
-           - sed -i "s/database_uri/"$Mongo_Uri"/" app.js  
-
-
-
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - sed -i "s/database_uri/"$Mongo_Uri"/" app.js 
+      - npm run build
+   post_build:
+    commands:
+       - echo Build completed on `date`
 artifacts:
         files: 
             - " **/* "
