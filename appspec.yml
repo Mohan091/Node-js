@@ -12,8 +12,8 @@ files:
 hooks:
    
   AfterInstall:
-    - location: Scripts/RunResourceTests.sh
+    - location: script/RunResourceTests.sh
       timeout: 180
   ApplicationStart:
-    - location: Scripts/RunFunctionalTests.sh
+    - location: script/RunFunctionalTests.sh
       timeout: 3600
