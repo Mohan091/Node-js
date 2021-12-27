@@ -11,12 +11,9 @@ files:
 
 hooks:
    
-   ApplicationInstall:
-         - location: /sript/install_script.sh
-           timeout: 300
-           runas: root
-           
-   ApplicationStart:
-         - location: /sript/start_script.sh
-           timeout: 300
-           runas: root
+  AfterInstall:
+    - location: Scripts/RunResourceTests.sh
+      timeout: 180
+  ApplicationStart:
+    - location: Scripts/RunFunctionalTests.sh
+      timeout: 3600
