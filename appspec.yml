@@ -1,19 +1,17 @@
 version: 0.0
 os: linux 
-
+run-as: root
 files:
     - source: / 
-      destination: /home/ubuntu/backend
+      destination: /home/ubuntu/backend/
       timeout: 300
-     
-      
-
-
 hooks:
-   
   AfterInstall:
     - location: script/RunResourceTests.sh
       timeout: 180
+      run-as: root
   ApplicationStart:
     - location: script/RunFunctionalTests.sh
-      timeout: 3600
+      timeout: 360
+      run-as: root
+      
