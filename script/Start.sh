@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ubuntu/back/node-express-realworld-example-app
+cd /home/ubuntu/backend/Node-js
 sudo pm2 start app.js
